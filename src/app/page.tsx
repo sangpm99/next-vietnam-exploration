@@ -1,9 +1,11 @@
-import Header from "@/views/apps/home/Header";
+import Header from "@views/apps/home/Header"
+import HerroBanner from "@views/apps/home/HerroBanner"
 
 export default function Home() {
   return (
-      <div>
-        <Header />
-      </div>
-  );
+    <div id='main'>
+      <Header />
+      <HerroBanner />
+    </div>
+  )
 }
