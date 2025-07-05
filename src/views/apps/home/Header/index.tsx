@@ -6,7 +6,7 @@ import Logo from "./components/Logo"
 import HeaderMenu from "./components/HeaderMenu"
 
 export default function Index() {
-  const [isScroll, setIsScroll] = useState(window.scrollY > 0)
+  const [isScroll, setIsScroll] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
