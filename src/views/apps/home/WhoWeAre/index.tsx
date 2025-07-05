@@ -3,7 +3,7 @@ import { ArrowRightOutlined } from "@ant-design/icons"
 
 export default function WhoWeAre() {
   return (
-    <div className="bg-[url('/images/who-we-are.jpg')] bg-cover bg-center px-[10%] py-20">
+    <div id='who-we-are' className="bg-[url('/images/who-we-are.jpg')] bg-cover bg-center px-[10%] py-20">
       <Row>
         <Col span={24}>
           <div className="rounded-[1rem] outline outline-[10px] outline-white/50 overflow-hidden h-[500px] bg-[url('/images/image-1.png')] bg-cover bg-bottom relative z-1">
