@@ -44,7 +44,6 @@ export default function WhoWeAre() {
                 height={0}
                 sizes='100vw'
                 style={{ width: "100%", height: "auto" }}
-                className='cursor-pointer'
                 unoptimized
               ></Image>
             </Col>
@@ -69,7 +68,7 @@ export default function WhoWeAre() {
                     height={0}
                     sizes='100vw'
                     style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                    className='cursor-pointer rounded'
+                    className='rounded'
                     unoptimized
                   ></Image>
                 </Col>
@@ -83,7 +82,7 @@ export default function WhoWeAre() {
                         height={0}
                         sizes='100vw'
                         style={{ width: "100%", height: "auto" }}
-                        className='cursor-pointer rounded'
+                        className='rounded'
                         unoptimized
                       ></Image>
                     </Col>
@@ -95,7 +94,7 @@ export default function WhoWeAre() {
                         height={0}
                         sizes='100vw'
                         style={{ width: "100%", height: "auto" }}
-                        className='cursor-pointer rounded'
+                        className='rounded'
                         unoptimized
                       ></Image>
                     </Col>
@@ -107,7 +106,7 @@ export default function WhoWeAre() {
                         height={0}
                         sizes='100vw'
                         style={{ width: "100%", height: "auto" }}
-                        className='cursor-pointer rounded'
+                        className='rounded'
                         unoptimized
                       ></Image>
                     </Col>
@@ -119,7 +118,7 @@ export default function WhoWeAre() {
                         height={0}
                         sizes='100vw'
                         style={{ width: "100%", height: "auto" }}
-                        className='cursor-pointer rounded'
+                        className='rounded'
                         unoptimized
                       ></Image>
                     </Col>
