@@ -5,6 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: 218,36,30;
 }
 
 @theme inline {
@@ -31,7 +32,13 @@ html {
   scroll-behavior: smooth;
 }
 
+/* 👉 Spacing */
 .section-container {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+/* 👉 Font */
+.text-primary {
+  color: rgb(var(--primary));
 }
