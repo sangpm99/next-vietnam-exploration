@@ -44,7 +44,7 @@ const tours = [
 export default function MostPopularTours() {
   return (
     <div className='relative top-0 left-0 right-0 h-auto z-1'>
-      <div className='relative h-[80vh] flex items-center z-2'>
+      <div className='relative h-[90vh] flex items-center z-2'>
         <video
           className='w-full h-full object-cover'
           autoPlay={true}
