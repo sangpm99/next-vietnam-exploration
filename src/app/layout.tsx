@@ -2,6 +2,8 @@ import type { Metadata } from "next"
 import { ReactNode } from "react"
 import "antd/dist/reset.css"
 import "@splidejs/react-splide/css"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 import "./globals.css"
 import localFont from "next/font/local"
 

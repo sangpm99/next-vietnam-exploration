@@ -1,79 +1,76 @@
 "use client"
-import { useState, useMemo } from "react"
-import { Splide, SplideSlide } from "@splidejs/react-splide"
+import { useState, useMemo, useRef } from "react"
 import Image from "next/image"
+import Slider from "react-slick"
 
 const destinations = [
   {
-    id: 3,
+    id: 0,
     name: "Ha Noi",
     image: "/images/image-13.jpg"
   },
   {
-    id: 4,
+    id: 1,
     name: "Ha Long",
     image: "/images/image-7.jpg"
   },
   {
-    id: 5,
+    id: 2,
     name: "Hue",
     image: "/images/image-14.jpg"
   },
   {
-    id: 1,
+    id: 3,
     name: "Binh Thuan",
     image: "/images/image-11.jpg"
   },
   {
-    id: 2,
+    id: 4,
     name: "Da Nang",
     image: "/images/image-12.jpg"
   }
 ]
 
 export default function FeaturalDestination() {
-  const [selected, setSelected] = useState<number>(3)
-
-  const handleChangeSlide = (dest: any, index: number) => {
-    const realIndex = dest.Components.Slides.getAt(index).slide.dataset.index
-    if (realIndex !== undefined) {
-      setSelected(realIndex)
-    }
-  }
+  const sliderRef = useRef(null)
+  const [selected, setSelected] = useState<number>(0)
 
   const destination = useMemo(() => {
     return destinations.find(item => item.id === Number(selected))
   }, [selected])
 
+  const settings = {
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: true,
+    arrows: true,
+    centerMode: true,
+    afterChange: (current: number) => {
+      setSelected(current)
+    }
+  }
+
   return (
-    <div id='destination' className="bg-[url('/images/who-we-are.jpg')] bg-cover bg-center px-[10%] py-[150px]">
+    <div id='destination' className="bg-[url('/images/who-we-are.jpg')] bg-cover bg-center py-[200px]">
       <h3 className='text-center text-4xl'>Featural Destination</h3>
-      <p className='text-center'>
+      <p className='text-center px-[20%]'>
         Vietnam offers a rich diversity of tourism experiences – from cultural and heritage tours in ancient towns,
         nature and eco-travel in majestic mountains and national parks, to beach holidays, culinary adventures,
         spiritual pilgrimages, and vibrant city escapes.
       </p>
-      <Splide
-        aria-label='Destinations'
-        options={{ rewind: true, gap: "1rem", pagination: false, type: "loop", perPage: 5, focus: "center" }}
-        className='mt-10'
-        onMoved={(dest: any, index: number) => {
-          handleChangeSlide(dest, index)
-        }}
-      >
-        {destinations.map(des => (
-          <SplideSlide key={des.id} data-index={des.id}>
-            <Image
-              src={des.image}
-              alt={des.name}
-              width={des.id === destination?.id ? 330 : 300}
-              height={des.id === destination?.id ? 500 : 400}
-              className='object-cover'
-              unoptimized
-            ></Image>
-          </SplideSlide>
+
+      <Slider className='min-h-[510px]' {...settings} ref={sliderRef}>
+        {destinations.map((des, i) => (
+          <div
+            className={`relative w-full p-2 cursor-grab transition-all duration-200 h-[500px] ${des.id === destination?.id ? "my-0" : "py-20"}`}
+            key={des.id}
+          >
+            <div className='relative w-full h-full rounded overflow-hidden'>
+              <Image src={des.image} alt={des.name} fill className='object-cover' unoptimized></Image>
+            </div>
+          </div>
         ))}
-      </Splide>
+      </Slider>
 
       <div className='flex w-100 justify-center mt-10'>
         <div
