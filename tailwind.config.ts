@@ -10,7 +10,11 @@ const config: Config = {
   },
   plugins: [tailwindcssLogical, tailwindPlugin],
   theme: {
-    extend: {}
+    extend: {
+      fontFamily: {
+        sans: ["var(--font-poppins)", "sans-serif"]
+      }
+    }
   },
   important: true
 }

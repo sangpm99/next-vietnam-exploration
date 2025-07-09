@@ -61,15 +61,14 @@ export default function FeaturalDestination() {
           handleChangeSlide(dest, index)
         }}
       >
-        {destinations.map(destination => (
-          <SplideSlide key={destination.id} data-index={destination.id}>
+        {destinations.map(des => (
+          <SplideSlide key={des.id} data-index={des.id}>
             <Image
-              src={destination.image}
-              alt={destination.name}
-              width={0}
-              height={0}
-              sizes='100vw'
-              className='w-full h-full object-cover'
+              src={des.image}
+              alt={des.name}
+              width={des.id === destination?.id ? 330 : 300}
+              height={des.id === destination?.id ? 500 : 400}
+              className='object-cover'
               unoptimized
             ></Image>
           </SplideSlide>

@@ -2,6 +2,8 @@ import Image from "next/image"
 import { Row, Col, Button, Rate, Tag } from "antd"
 import { ArrowRightOutlined } from "@ant-design/icons"
 
+import MostPopularToursVideoBackground from "./components/MostPopularToursVideoBackground"
+
 const tours = [
   {
     id: 1,
@@ -45,16 +47,7 @@ export default function MostPopularTours() {
   return (
     <div className='relative top-0 left-0 right-0 h-auto z-1'>
       <div className='relative h-[90vh] flex items-center z-2'>
-        <video
-          className='w-full h-full object-cover'
-          autoPlay={true}
-          loop={true}
-          muted={true}
-          playsInline={true}
-          preload='auto'
-        >
-          <source src='/videos/mu-cang-chai.mp4' type='video/mp4' />
-        </video>
+        <MostPopularToursVideoBackground></MostPopularToursVideoBackground>
       </div>
 
       <div className='absolute top-0 left-0 right-0 bottom-0 z-3 bg-black/20'></div>

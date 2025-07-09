@@ -14,7 +14,8 @@ function AntdWrapper({ children }: { children: ReactNode }) {
         <ConfigProvider
           theme={{
             token: {
-              colorPrimary: "rgba(218,36,30)"
+              colorPrimary: "rgba(218,36,30)",
+              fontFamily: "var(--font-poppins, sans-serif)"
             }
           }}
         >
