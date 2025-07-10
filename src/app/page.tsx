@@ -1,18 +1,16 @@
-import Header from "@views/apps/home/Header"
 import HerroBanner from "@views/apps/home/HerroBanner"
 import WhoWeAre from "@views/apps/home/WhoWeAre"
 import MostPopularTours from "@views/apps/home/MostPopularTours"
 import FeaturalDestination from "@views/apps/home/FeaturalDestination"
 import FeedbackFromGuests from "@views/apps/home/FeedbackFromGuests"
 import Video from "@views/apps/home/Video"
-import Footer from "@views/apps/home/Footer"
 
+import DefaultLayout from "@/layouts/default"
 import Clouds from "@views/apps/components/Clouds"
 
 export default function Home() {
   return (
-    <div id='main'>
-      <Header />
+    <DefaultLayout>
       <HerroBanner />
       <WhoWeAre />
       <Clouds />
@@ -23,7 +21,6 @@ export default function Home() {
       <FeedbackFromGuests />
       <Clouds />
       <Video />
-      <Footer />
-    </div>
+    </DefaultLayout>
   )
 }

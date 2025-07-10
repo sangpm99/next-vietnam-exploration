@@ -48,6 +48,10 @@ html {
 }
 
 /* 👉 Plugin */
+.drawer-padding-none .ant-drawer-body {
+  padding: 0 !important;
+}
+
 .slick-track {
   display: flex;
   align-items: center;
