@@ -1,49 +1,151 @@
+"use client"
+import { useState, useEffect } from "react"
 import Image from "next/image"
-import { Row, Col, Button, Rate, Tag } from "antd"
-import { ArrowRightOutlined } from "@ant-design/icons"
+import { Row, Col, Rate } from "antd"
+import { ArrowDownOutlined, ArrowUpOutlined } from "@ant-design/icons"
+import Slider from "react-slick"
+import "./FeedbackFromGuests.scss"
 
-const tours = [
-  {
-    id: 1,
-    name: "Ha Long Bay",
-    description: "Explore the stunning limestone islands and emerald waters of this UNESCO World Heritage Site.",
-    time: "4 days",
-    category: "Community tourism & trekking",
-    stars: 4.5,
-    image: "/images/image-7.jpg"
-  },
-  {
-    id: 2,
-    name: "Duc Ba Church",
-    description: "Discover French colonial architecture and spiritual serenity at Ho Chi Minh City's iconic cathedral.",
-    time: "4 days",
-    category: "Community tourism & trekking",
-    stars: 4.5,
-    image: "/images/image-8.jpg"
-  },
-  {
-    id: 3,
-    name: "Tan Thanh",
-    description: "Witness a serene seaside sunrise and experience the peaceful rhythm of local fishing life.",
-    time: "4 days",
-    category: "Community tourism & trekking",
-    stars: 4.5,
-    image: "/images/image-9.jpg"
-  },
-  {
-    id: 4,
-    name: "Ben Tre",
-    description: "Cruise through palm-lined canals and immerse yourself in the vibrant culture of the Mekong Delta.",
-    time: "4 days",
-    category: "Community tourism & trekking",
-    stars: 4.5,
-    image: "/images/image-10.jpg"
-  }
-]
+interface Feedback {
+  id: number
+  name: string
+  country: string
+  description: string
+  flag: string
+  stars: number
+  image: string
+  isScroll: boolean
+}
 
 export default function FeedbackFromGuests() {
+  const settings = {
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    arrows: true,
+    dots: true,
+    infinite: false,
+    accessibility: false // Ngan warning khi scroll
+  }
+
+  const [mount, setMount] = useState<boolean>(false)
+  const [feedbacks, setFeedbacks] = useState<Feedback[]>([
+    {
+      id: 1,
+      name: "Thomas Wilson",
+      country: "French",
+      description:
+        "Vietnam offers a rich diversity of tourism experiences – from cultural and heritage tours in ancient towns, nature and eco-travel in majestic mountains and national parks, to beach holidays, culinary adventures, spiritual pilgrimages, and vibrant city escapes.",
+      flag: "/images/flag-french.png",
+      stars: 4.5,
+      image: "/images/feedback-profile.png",
+      isScroll: false
+    },
+    {
+      id: 2,
+      name: "Thomas Wilson",
+      country: "French",
+      description:
+        "Vietnam offers a rich diversity of tourism experiences – from cultural and heritage tours in ancient towns, nature and eco-travel in majestic mountains and national parks, to beach holidays, culinary adventures, spiritual pilgrimages, and vibrant city escapes.",
+      flag: "/images/flag-french.png",
+      stars: 5,
+      image: "/images/feedback-profile.png",
+      isScroll: false
+    },
+    {
+      id: 3,
+      name: "Thomas Wilson",
+      country: "French",
+      description:
+        "Vietnam offers a rich diversity of tourism experiences – from cultural and heritage tours in ancient towns, nature and eco-travel in majestic mountains and national parks, to beach holidays, culinary adventures, spiritual pilgrimages, and vibrant city escapes.",
+      flag: "/images/flag-french.png",
+      stars: 4,
+      image: "/images/feedback-profile.png",
+      isScroll: false
+    },
+    {
+      id: 4,
+      name: "Thomas Wilson",
+      country: "French",
+      description:
+        "Vietnam offers a rich diversity of tourism experiences – from cultural and heritage tours in ancient towns, nature and eco-travel in majestic mountains and national parks, to beach holidays, culinary adventures, spiritual pilgrimages, and vibrant city escapes.",
+      flag: "/images/flag-french.png",
+      stars: 5,
+      image: "/images/feedback-profile.png",
+      isScroll: false
+    },
+    {
+      id: 5,
+      name: "Thomas Wilson",
+      country: "French",
+      description:
+        "Vietnam offers a rich diversity of tourism experiences – from cultural and heritage tours in ancient towns, nature and eco-travel in majestic mountains and national parks, to beach holidays, culinary adventures, spiritual pilgrimages, and vibrant city escapes.",
+      flag: "/images/flag-french.png",
+      stars: 5,
+      image: "/images/feedback-profile.png",
+      isScroll: false
+    },
+    {
+      id: 6,
+      name: "Thomas Wilson",
+      country: "French",
+      description:
+        "Vietnam offers a rich diversity of tourism experiences – from cultural and heritage tours in ancient towns, nature and eco-travel in majestic mountains and national parks, to beach holidays, culinary adventures, spiritual pilgrimages, and vibrant city escapes.",
+      flag: "/images/flag-french.png",
+      stars: 5,
+      image: "/images/feedback-profile.png",
+      isScroll: false
+    },
+    {
+      id: 7,
+      name: "Thomas Wilson",
+      country: "French",
+      description:
+        "Vietnam offers a rich diversity of tourism experiences – from cultural and heritage tours in ancient towns, nature and eco-travel in majestic mountains and national parks, to beach holidays, culinary adventures, spiritual pilgrimages, and vibrant city escapes.",
+      flag: "/images/flag-french.png",
+      stars: 4.5,
+      image: "/images/feedback-profile.png",
+      isScroll: false
+    },
+    {
+      id: 8,
+      name: "Thomas Wilson",
+      country: "French",
+      description:
+        "Vietnam offers a rich diversity of tourism experiences – from cultural and heritage tours in ancient towns, nature and eco-travel in majestic mountains and national parks, to beach holidays, culinary adventures, spiritual pilgrimages, and vibrant city escapes.",
+      flag: "/images/flag-french.png",
+      stars: 4.5,
+      image: "/images/feedback-profile.png",
+      isScroll: false
+    },
+    {
+      id: 9,
+      name: "Thomas Wilson",
+      country: "French",
+      description:
+        "Vietnam offers a rich diversity of tourism experiences – from cultural and heritage tours in ancient towns, nature and eco-travel in majestic mountains and national parks, to beach holidays, culinary adventures, spiritual pilgrimages, and vibrant city escapes.",
+      flag: "/images/flag-french.png",
+      stars: 5,
+      image: "/images/feedback-profile.png",
+      isScroll: false
+    }
+  ])
+
+  const setScroll = (index: number) => {
+    const feedback = feedbacks[index]
+    feedback.isScroll = !feedback.isScroll
+    setFeedbacks([...feedbacks])
+  }
+
+  useEffect(() => {
+    setMount(true)
+  }, [])
+
+  if (!mount) {
+    return null
+  }
+
   return (
-    <div className='relative top-0 left-0 right-0 h-auto z-1'>
+    <div className='feedback relative top-0 left-0 right-0 h-auto z-1'>
       <div className='relative h-[90vh] flex items-center z-2'>
         <Image src='/images/image-15.jpg' alt='Background Image' fill className='object-cover' unoptimized></Image>
       </div>
@@ -56,38 +158,70 @@ export default function FeedbackFromGuests() {
             <h5 className='text-white text-4xl mb-10 text-center'>Feedback from Guests</h5>
           </Col>
           <Col span={24}>
-            <Row gutter={[16, 16]}>
-              {tours.map((tour, index) => (
-                <Col span={6} key={index}>
-                  <div className='rounded p-2 bg-white'>
-                    <Image
-                      src={tour.image}
-                      alt={tour.name}
-                      width={0}
-                      height={0}
-                      sizes='100vw'
-                      className='object-cover w-full h-[200px] rounded-[5px]'
-                      unoptimized
-                    ></Image>
+            <Slider {...settings}>
+              {feedbacks.map((feedback, index) => (
+                <div className='p-3'>
+                  <div className='rounded-[10px] overflow-hidden bg-white'>
+                    <div className='bg-gray-300 p-3'>
+                      <Row>
+                        <Col flex='none'>
+                          <div className='relative bg-white w-[40px] h-[40px] rounded-[50%] flex items-center justify-center'>
+                            <Image
+                              src={feedback.image}
+                              alt={feedback.name}
+                              fill
+                              className='object-cover'
+                              unoptimized
+                            ></Image>
+                          </div>
+                        </Col>
 
-                    <div className='flex flex-col gap-3 py-2'>
-                      <div className='flex justify-between items-center'>
-                        <Rate disabled allowHalf defaultValue={tour.stars}></Rate>
+                        <Col flex='auto' className='flex items-center ps-3'>
+                          {feedback.name}
+                        </Col>
 
-                        <span>{tour.time}</span>
-                      </div>
+                        <Col flex='none' className='flex gap-3 items-center'>
+                          <div className='relative w-[16px] h-[16px] flex items-center justify-center'>
+                            <Image src={feedback.flag} alt='Flag' fill className='object-cover' unoptimized></Image>
+                          </div>
 
-                      <div>
-                        <Tag className='border-gray-500'>{tour.category}</Tag>
-                      </div>
+                          <span>{feedback.country}</span>
+                        </Col>
+                      </Row>
 
-                      <h3 className='mb-0'>{tour.name}</h3>
-                      <p className='mb-0'>{tour.description}</p>
+                      <Col span={24} className='mt-3'>
+                        <Rate disabled allowHalf defaultValue={feedback.stars}></Rate>
+                      </Col>
+                    </div>
+
+                    <div className='p-3'>
+                      <Row>
+                        <Col span={24}>
+                          <p className={`mb-0 leading-6 ${feedback.isScroll ? "" : "line-clamp-4"}`}>
+                            {feedback.description}
+                          </p>
+
+                          <p
+                            className='mt-3 mb-0 cursor-pointer opacity-75 hover:opacity-100'
+                            onClick={() => setScroll(index)}
+                          >
+                            {feedback.isScroll ? (
+                              <>
+                                Hide <ArrowUpOutlined />
+                              </>
+                            ) : (
+                              <>
+                                Scroll <ArrowDownOutlined />
+                              </>
+                            )}
+                          </p>
+                        </Col>
+                      </Row>
                     </div>
                   </div>
-                </Col>
+                </div>
               ))}
-            </Row>
+            </Slider>
           </Col>
         </Row>
       </div>
