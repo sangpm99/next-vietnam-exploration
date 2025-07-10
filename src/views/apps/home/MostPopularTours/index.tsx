@@ -53,7 +53,7 @@ export default function MostPopularTours() {
       <div className='absolute top-0 left-0 right-0 bottom-0 z-3 bg-black/20'></div>
 
       <div className='absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center z-4'>
-        <Row className='w-full px-[10%]'>
+        <Row className='w-full section-container'>
           <Col span={24}>
             <div className='text-white text-4xl mb-5 flex justify-between'>
               <h5>Most Popular Tours</h5>
@@ -72,7 +72,7 @@ export default function MostPopularTours() {
           <Col span={24}>
             <Row gutter={[16, 16]}>
               {tours.map((tour, index) => (
-                <Col span={6} key={index}>
+                <Col span={24} lg={6} key={index}>
                   <div className='rounded p-2 bg-white'>
                     <Image
                       src={tour.image}
@@ -96,7 +96,7 @@ export default function MostPopularTours() {
                       </div>
 
                       <h3 className='mb-0'>{tour.name}</h3>
-                      <p className='mb-0'>{tour.description}</p>
+                      <p className='mb-0 line-clamp-2'>{tour.description}</p>
                     </div>
                   </div>
                 </Col>

@@ -46,7 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${poppins.variable} font-sans antialiased`}>
+      <body className={`${poppins.variable} font-sans antialiased w-[100vw] overflow-x-hidden`}>
         <AntdWrapper>{children}</AntdWrapper>
       </body>
     </html>

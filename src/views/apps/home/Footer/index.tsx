@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export default function Footer() {
   return (
-    <div className='bg-black text-white py-10 px-[10%]'>
+    <div className='bg-black text-white py-10 section-container'>
       <Row>
         <Col span={24}>
           <Row>
