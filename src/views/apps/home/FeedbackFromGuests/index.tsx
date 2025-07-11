@@ -1,10 +1,13 @@
 "use client"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useMemo } from "react"
 import Image from "next/image"
 import { Row, Col, Rate } from "antd"
 import { ArrowDownOutlined, ArrowUpOutlined } from "@ant-design/icons"
 import Slider from "react-slick"
 import "./FeedbackFromGuests.scss"
+import { Grid } from "antd"
+
+const { useBreakpoint } = Grid
 
 interface Feedback {
   id: number
@@ -18,9 +21,19 @@ interface Feedback {
 }
 
 export default function FeedbackFromGuests() {
+  const screens = useBreakpoint()
+
+  const slidesToShow = useMemo(() => {
+    if (screens.xxl) return 3
+    if (screens.xl) return 3
+    if (screens.lg) return 2
+    if (screens.md) return 2
+    return 1
+  }, [screens])
+
   const settings = {
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: slidesToShow,
+    slidesToScroll: slidesToShow,
     arrows: true,
     dots: true,
     infinite: false,

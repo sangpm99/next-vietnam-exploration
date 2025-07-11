@@ -1,7 +1,11 @@
 .feedback {
   .slick-arrow {
     top: 50%;
-    bottom: auto
+    bottom: auto;
+
+    @media (max-width: 1070px) {
+      display: none !important;
+    }
   }
 
   .slick-next {

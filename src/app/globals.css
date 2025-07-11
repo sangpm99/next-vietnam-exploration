@@ -7,7 +7,16 @@
   --foreground: #171717;
   --primary: 218,36,30;
   --carousel-size: 70px;
-  --carousel-padding: 30%;
+  --carousel-padding: 27%;
+  
+  @media (max-width: 899px) {
+    --carousel-padding: 52%;
+  }
+
+  @media (max-width: 500px) {
+    --carousel-size: 40px;
+    --carousel-padding: 41%;
+  }
 }
 
 @theme inline {
@@ -101,5 +110,13 @@ html {
   .section-container {
     padding-left: 5%;
     padding-right: 5%;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .section-container {
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }

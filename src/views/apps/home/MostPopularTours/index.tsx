@@ -46,8 +46,18 @@ const tours = [
 export default function MostPopularTours() {
   return (
     <div className='relative top-0 left-0 right-0 h-auto z-1'>
-      <div className='relative h-[90vh] flex items-center z-2'>
-        <MostPopularToursVideoBackground></MostPopularToursVideoBackground>
+      <div className='relative h-[1800px] md:h-[1000px] flex items-center z-2'>
+        <div className='absolute top-0 left-0 right-0 bottom-0 hidden sm:block'>
+          <MostPopularToursVideoBackground></MostPopularToursVideoBackground>
+        </div>
+
+        <Image
+          src='/images/mountain.jpg'
+          alt='Most Popular Tours'
+          fill
+          unoptimized
+          className='block sm:hidden object-cover'
+        ></Image>
       </div>
 
       <div className='absolute top-0 left-0 right-0 bottom-0 z-3 bg-black/20'></div>
@@ -72,7 +82,7 @@ export default function MostPopularTours() {
           <Col span={24}>
             <Row gutter={[16, 16]}>
               {tours.map((tour, index) => (
-                <Col span={24} lg={6} key={index}>
+                <Col span={24} md={12} lg={6} key={index}>
                   <div className='rounded p-2 bg-white'>
                     <Image
                       src={tour.image}

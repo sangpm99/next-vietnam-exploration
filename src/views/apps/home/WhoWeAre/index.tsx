@@ -9,7 +9,7 @@ export default function WhoWeAre() {
         <Col span={24}>
           <div className="rounded-[1rem] outline outline-[10px] outline-white/50 overflow-hidden h-[500px] bg-[url('/images/image-1.png')] bg-cover bg-bottom relative z-1">
             <div className='absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-b from-black to-transparent z-2'></div>
-            <div className='absolute top-0 left-0 right-0 bottom-0 text-center text-white p-10 text-xl z-3'>
+            <div className='absolute top-0 left-0 right-0 bottom-0 text-center text-white p-10 text-sm md:text-xl z-3'>
               <h3>Who we are?</h3>
               <p>
                 "A Vietnamese team, fluent in French and English, will make you LOVE Vietnam and help you discover all
@@ -30,24 +30,20 @@ export default function WhoWeAre() {
           </div>
         </Col>
 
-        <Col span={24}>
-          <div className='my-20'></div>
-        </Col>
-
-        <Col span={24}>
+        <Col span={24} className='mt-5 md:mt-20'>
           <Row>
-            <Col span={6}>
+            <Col span={0} sm={6}>
               <Image
                 src='/images/vietnam-map.png'
                 alt='Viet Nam Map'
                 width={0}
                 height={0}
                 sizes='100vw'
-                style={{ width: "100%", height: "auto" }}
+                className='w-full h-[auto]'
                 unoptimized
               ></Image>
             </Col>
-            <Col span={18} className='ps-20'>
+            <Col span={24} sm={18} className='sm:ps-20'>
               <h4 className='text-3xl'>
                 Discover Vietnam <span className='text-primary'>- A Land of Timeless Charm</span>
               </h4>
@@ -60,7 +56,7 @@ export default function WhoWeAre() {
               </p>
 
               <Row gutter={[16, 16]}>
-                <Col span={8}>
+                <Col span={24} sm={8}>
                   <Image
                     src='/images/image-2.jpg'
                     alt='HCM City'
@@ -72,7 +68,7 @@ export default function WhoWeAre() {
                     unoptimized
                   ></Image>
                 </Col>
-                <Col span={16}>
+                <Col span={24} sm={16}>
                   <Row gutter={[16, 16]}>
                     <Col span={12}>
                       <Image

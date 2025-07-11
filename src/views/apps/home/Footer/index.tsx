@@ -7,7 +7,7 @@ export default function Footer() {
       <Row>
         <Col span={24}>
           <Row>
-            <Col flex='none' className='w-[200px]'>
+            <Col flex='none' className='w-[200px] mt-5 md:mt-0'>
               <Row>
                 <Col span={24}>
                   <Image
@@ -67,7 +67,7 @@ export default function Footer() {
               </Row>
             </Col>
             <Col flex='auto'></Col>
-            <Col flex='none'>
+            <Col flex='none' className='mt-5 md:mt-0'>
               <div className='mb-4'>
                 <Image
                   src='/images/icon-location.png'
@@ -78,7 +78,9 @@ export default function Footer() {
                   className='w-[20px] h-auto me-2'
                   unoptimized
                 />
-                <span>11/67 Alley 06, Mieu Nha Street, Nam Tu Liem District, Hanoi</span>
+                <a href='https://maps.app.goo.gl/DNoscCaGYGxCCdTL9' target='_blank' className='text-white'>
+                  11/67 Alley 06, Mieu Nha Street, Nam Tu Liem District, Hanoi
+                </a>
               </div>
 
               <div className='mb-4 '>
@@ -121,25 +123,32 @@ export default function Footer() {
                   className='w-[20px] h-auto me-2'
                   unoptimized
                 />
-                <span>Mobile & WhatsApp: (+84) 98 973 8086</span>
+                <span></span>
+                <a href='https://api.whatsapp.com/send?phone=84989738086' target='_blank' className='text-white'>
+                  Mobile & WhatsApp: (+84) 98 973 8086
+                </a>
               </div>
             </Col>
           </Row>
         </Col>
 
-        <Col span={24} className='my-5'>
+        <Col span={24} className='mt-5 mb-0 md:mb-5'>
           <hr />
         </Col>
 
         <Col span={24}>
-          <div className='flex justify-between'>
-            <span>© 2025 Vietnam Exploration</span>
-            <div className='flex gap-10'>
-              <span>General Terms and Conditions</span>
-              <span>Contact</span>
-              <span>Legal notices</span>
-            </div>
-          </div>
+          <Row>
+            <Col span={24} md={8}>
+              <div className='mt-5 md:mt-0'>© 2025 Vietnam Exploration</div>
+            </Col>
+            <Col span={24} md={16}>
+              <div className='mt-5 md:mt-0 flex flex-col sm:flex-row justify-start md:justify-end gap-5 md:gap-10'>
+                <span>General Terms and Conditions</span>
+                <span>Contact</span>
+                <span>Legal notices</span>
+              </div>
+            </Col>
+          </Row>
         </Col>
       </Row>
     </div>

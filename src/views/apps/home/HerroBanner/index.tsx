@@ -12,14 +12,14 @@ export default function HerroBanner() {
           <HerroBannerVideoBackground></HerroBannerVideoBackground>
         </div>
 
-        <Image className='block md:hidden' src='/images/herro-banner.png' fill alt='Herro Banner'></Image>
+        <Image src='/images/herro-banner.png' alt='Herro Banner' className='block md:hidden object-cover' fill></Image>
       </div>
 
       <Row className='justify-center absolute bottom-0 left-0 right-0 z-3'>
         <Col span={24}>
           <div className='text-white text-4xl text-center mb-5'>Welcome to Vietnam</div>
         </Col>
-        <Col span={12} md={8} xl={5}>
+        <Col span={20} xs={16} md={8} xl={5}>
           <Input size='large' placeholder='Where do you want to go?' prefix={<SearchOutlined />} />
         </Col>
         <Col span={24} className='flex justify-center text-2xl'>
