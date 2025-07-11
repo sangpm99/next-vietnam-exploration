@@ -12,7 +12,14 @@ export default function HerroBanner() {
           <HerroBannerVideoBackground></HerroBannerVideoBackground>
         </div>
 
-        <Image src='/images/herro-banner.png' alt='Herro Banner' className='block md:hidden object-cover' fill></Image>
+        <Image
+          src='/images/herro-banner.png'
+          alt='Herro Banner'
+          className='block md:hidden object-cover'
+          fill
+          unoptimized
+          priority={true}
+        ></Image>
       </div>
 
       <Row className='justify-center absolute bottom-0 left-0 right-0 z-3'>
