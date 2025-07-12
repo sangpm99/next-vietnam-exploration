@@ -4,7 +4,7 @@ import Image from "next/image"
 export default function Index() {
   return (
     <Image
-      src='/logo.png'
+      src='/logo.webp'
       alt='Logo'
       width={0}
       height={0}

@@ -13,7 +13,7 @@ export default function HerroBanner() {
         </div>
 
         <Image
-          src='/images/herro-banner.png'
+          src='/images/herro-banner.webp'
           alt='Herro Banner'
           className='block md:hidden object-cover'
           fill

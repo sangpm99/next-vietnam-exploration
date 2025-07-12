@@ -10,27 +10,27 @@ const destinations = [
   {
     id: 0,
     name: "Ha Noi",
-    image: "/images/image-13.jpg"
+    image: "/images/image-13.webp"
   },
   {
     id: 1,
     name: "Ha Long",
-    image: "/images/image-7.jpg"
+    image: "/images/image-7.webp"
   },
   {
     id: 2,
     name: "Hue",
-    image: "/images/image-14.jpg"
+    image: "/images/image-14.webp"
   },
   {
     id: 3,
     name: "Binh Thuan",
-    image: "/images/image-11.jpg"
+    image: "/images/image-11.webp"
   },
   {
     id: 4,
     name: "Da Nang",
-    image: "/images/image-12.jpg"
+    image: "/images/image-12.webp"
   }
 ]
 
@@ -59,7 +59,7 @@ export default function FeaturalDestination() {
   }
 
   return (
-    <div id='destination' className="bg-[url('/images/who-we-are.jpg')] bg-cover bg-center py-[100px] md:py-[200px]">
+    <div id='destination' className="bg-[url('/images/who-we-are.webp')] bg-cover bg-center py-[100px] md:py-[200px]">
       <h3 className='text-center text-4xl'>Featural Destination</h3>
       <p className='text-center px-[5%] md:px-[20%]'>
         Vietnam offers a rich diversity of tourism experiences – from cultural and heritage tours in ancient towns,

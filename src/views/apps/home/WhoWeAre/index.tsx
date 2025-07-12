@@ -4,10 +4,10 @@ import Image from "next/image"
 
 export default function WhoWeAre() {
   return (
-    <div id='who-we-are' className="bg-[url('/images/who-we-are.jpg')] bg-cover bg-center section-container py-20">
+    <div id='who-we-are' className="bg-[url('/images/who-we-are.webp')] bg-cover bg-center section-container py-20">
       <Row>
         <Col span={24}>
-          <div className="rounded-[1rem] outline outline-[10px] outline-white/50 overflow-hidden h-[500px] bg-[url('/images/image-1.png')] bg-cover bg-bottom relative z-1">
+          <div className="rounded-[1rem] outline outline-[10px] outline-white/50 overflow-hidden h-[500px] bg-[url('/images/image-1.webp')] bg-cover bg-bottom relative z-1">
             <div className='absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-b from-black to-transparent z-2'></div>
             <div className='absolute top-0 left-0 right-0 bottom-0 text-center text-white p-10 text-sm md:text-xl z-3'>
               <h3>Who we are?</h3>
@@ -34,7 +34,7 @@ export default function WhoWeAre() {
           <Row>
             <Col span={0} sm={6}>
               <Image
-                src='/images/vietnam-map.png'
+                src='/images/vietnam-map.webp'
                 alt='Viet Nam Map'
                 width={0}
                 height={0}
@@ -58,7 +58,7 @@ export default function WhoWeAre() {
               <Row gutter={[16, 16]}>
                 <Col span={24} sm={8}>
                   <Image
-                    src='/images/image-2.jpg'
+                    src='/images/image-2.webp'
                     alt='HCM City'
                     width={0}
                     height={0}
@@ -72,7 +72,7 @@ export default function WhoWeAre() {
                   <Row gutter={[16, 16]}>
                     <Col span={12}>
                       <Image
-                        src='/images/image-3.jpg'
+                        src='/images/image-3.webp'
                         alt='Ha Long Bay'
                         width={0}
                         height={0}
@@ -84,7 +84,7 @@ export default function WhoWeAre() {
                     </Col>
                     <Col span={12}>
                       <Image
-                        src='/images/image-4.jpg'
+                        src='/images/image-4.webp'
                         alt='Sea of Da Nang'
                         width={0}
                         height={0}
@@ -96,7 +96,7 @@ export default function WhoWeAre() {
                     </Col>
                     <Col span={12}>
                       <Image
-                        src='/images/image-5.jpg'
+                        src='/images/image-5.webp'
                         alt='Hue City'
                         width={0}
                         height={0}
@@ -108,7 +108,7 @@ export default function WhoWeAre() {
                     </Col>
                     <Col span={12}>
                       <Image
-                        src='/images/image-6.jpg'
+                        src='/images/image-6.webp'
                         alt='Mountains'
                         width={0}
                         height={0}

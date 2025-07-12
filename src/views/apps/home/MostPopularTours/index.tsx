@@ -12,7 +12,7 @@ const tours = [
     time: "4 days",
     category: "Community tourism & trekking",
     stars: 4.5,
-    image: "/images/image-7.jpg"
+    image: "/images/image-7.webp"
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const tours = [
     time: "4 days",
     category: "Community tourism & trekking",
     stars: 4.5,
-    image: "/images/image-8.jpg"
+    image: "/images/image-8.webp"
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const tours = [
     time: "4 days",
     category: "Community tourism & trekking",
     stars: 4.5,
-    image: "/images/image-9.jpg"
+    image: "/images/image-9.webp"
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const tours = [
     time: "4 days",
     category: "Community tourism & trekking",
     stars: 4.5,
-    image: "/images/image-10.jpg"
+    image: "/images/image-10.webp"
   }
 ]
 
@@ -52,7 +52,7 @@ export default function MostPopularTours() {
         </div>
 
         <Image
-          src='/images/mountain.jpg'
+          src='/images/mountain.webp'
           alt='Most Popular Tours'
           fill
           unoptimized

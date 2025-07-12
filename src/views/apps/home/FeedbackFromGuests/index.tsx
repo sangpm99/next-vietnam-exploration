@@ -48,9 +48,9 @@ export default function FeedbackFromGuests() {
       country: "French",
       description:
         "Vietnam offers a rich diversity of tourism experiences – from cultural and heritage tours in ancient towns, nature and eco-travel in majestic mountains and national parks, to beach holidays, culinary adventures, spiritual pilgrimages, and vibrant city escapes.",
-      flag: "/images/flag-french.png",
+      flag: "/images/flag-french.webp",
       stars: 4.5,
-      image: "/images/feedback-profile.png",
+      image: "/images/feedback-profile.webp",
       isScroll: false
     },
     {
@@ -59,9 +59,9 @@ export default function FeedbackFromGuests() {
       country: "French",
       description:
         "Vietnam offers a rich diversity of tourism experiences – from cultural and heritage tours in ancient towns, nature and eco-travel in majestic mountains and national parks, to beach holidays, culinary adventures, spiritual pilgrimages, and vibrant city escapes.",
-      flag: "/images/flag-french.png",
+      flag: "/images/flag-french.webp",
       stars: 5,
-      image: "/images/feedback-profile.png",
+      image: "/images/feedback-profile.webp",
       isScroll: false
     },
     {
@@ -70,9 +70,9 @@ export default function FeedbackFromGuests() {
       country: "French",
       description:
         "Vietnam offers a rich diversity of tourism experiences – from cultural and heritage tours in ancient towns, nature and eco-travel in majestic mountains and national parks, to beach holidays, culinary adventures, spiritual pilgrimages, and vibrant city escapes.",
-      flag: "/images/flag-french.png",
+      flag: "/images/flag-french.webp",
       stars: 4,
-      image: "/images/feedback-profile.png",
+      image: "/images/feedback-profile.webp",
       isScroll: false
     },
     {
@@ -81,9 +81,9 @@ export default function FeedbackFromGuests() {
       country: "French",
       description:
         "Vietnam offers a rich diversity of tourism experiences – from cultural and heritage tours in ancient towns, nature and eco-travel in majestic mountains and national parks, to beach holidays, culinary adventures, spiritual pilgrimages, and vibrant city escapes.",
-      flag: "/images/flag-french.png",
+      flag: "/images/flag-french.webp",
       stars: 5,
-      image: "/images/feedback-profile.png",
+      image: "/images/feedback-profile.webp",
       isScroll: false
     },
     {
@@ -92,9 +92,9 @@ export default function FeedbackFromGuests() {
       country: "French",
       description:
         "Vietnam offers a rich diversity of tourism experiences – from cultural and heritage tours in ancient towns, nature and eco-travel in majestic mountains and national parks, to beach holidays, culinary adventures, spiritual pilgrimages, and vibrant city escapes.",
-      flag: "/images/flag-french.png",
+      flag: "/images/flag-french.webp",
       stars: 5,
-      image: "/images/feedback-profile.png",
+      image: "/images/feedback-profile.webp",
       isScroll: false
     },
     {
@@ -103,9 +103,9 @@ export default function FeedbackFromGuests() {
       country: "French",
       description:
         "Vietnam offers a rich diversity of tourism experiences – from cultural and heritage tours in ancient towns, nature and eco-travel in majestic mountains and national parks, to beach holidays, culinary adventures, spiritual pilgrimages, and vibrant city escapes.",
-      flag: "/images/flag-french.png",
+      flag: "/images/flag-french.webp",
       stars: 5,
-      image: "/images/feedback-profile.png",
+      image: "/images/feedback-profile.webp",
       isScroll: false
     },
     {
@@ -114,9 +114,9 @@ export default function FeedbackFromGuests() {
       country: "French",
       description:
         "Vietnam offers a rich diversity of tourism experiences – from cultural and heritage tours in ancient towns, nature and eco-travel in majestic mountains and national parks, to beach holidays, culinary adventures, spiritual pilgrimages, and vibrant city escapes.",
-      flag: "/images/flag-french.png",
+      flag: "/images/flag-french.webp",
       stars: 4.5,
-      image: "/images/feedback-profile.png",
+      image: "/images/feedback-profile.webp",
       isScroll: false
     },
     {
@@ -125,9 +125,9 @@ export default function FeedbackFromGuests() {
       country: "French",
       description:
         "Vietnam offers a rich diversity of tourism experiences – from cultural and heritage tours in ancient towns, nature and eco-travel in majestic mountains and national parks, to beach holidays, culinary adventures, spiritual pilgrimages, and vibrant city escapes.",
-      flag: "/images/flag-french.png",
+      flag: "/images/flag-french.webp",
       stars: 4.5,
-      image: "/images/feedback-profile.png",
+      image: "/images/feedback-profile.webp",
       isScroll: false
     },
     {
@@ -136,9 +136,9 @@ export default function FeedbackFromGuests() {
       country: "French",
       description:
         "Vietnam offers a rich diversity of tourism experiences – from cultural and heritage tours in ancient towns, nature and eco-travel in majestic mountains and national parks, to beach holidays, culinary adventures, spiritual pilgrimages, and vibrant city escapes.",
-      flag: "/images/flag-french.png",
+      flag: "/images/flag-french.webp",
       stars: 5,
-      image: "/images/feedback-profile.png",
+      image: "/images/feedback-profile.webp",
       isScroll: false
     }
   ])
@@ -160,7 +160,7 @@ export default function FeedbackFromGuests() {
   return (
     <div className='feedback relative top-0 left-0 right-0 h-auto z-1'>
       <div className='relative h-[90vh] flex items-center z-2'>
-        <Image src='/images/image-15.jpg' alt='Background Image' fill className='object-cover' unoptimized></Image>
+        <Image src='/images/image-15.webp' alt='Background Image' fill className='object-cover' unoptimized></Image>
       </div>
 
       <div className='absolute top-0 left-0 right-0 bottom-0 z-3 bg-black/20'></div>

@@ -11,7 +11,7 @@ export default function Footer() {
               <Row>
                 <Col span={24}>
                   <Image
-                    src='/images/logo-white.png'
+                    src='/images/logo-white.webp'
                     alt='Logo White'
                     width={0}
                     height={0}
@@ -24,7 +24,7 @@ export default function Footer() {
                 <Col span={24}>
                   <div className='flex gap-5 mt-5 bg-primary justify-around rounded-[20px] p-2'>
                     <Image
-                      src='/images/icon-facebook.png'
+                      src='/images/icon-facebook.webp'
                       alt='Facebook Icon'
                       width={0}
                       height={0}
@@ -34,7 +34,7 @@ export default function Footer() {
                     />
 
                     <Image
-                      src='/images/icon-ig.png'
+                      src='/images/icon-ig.webp'
                       alt='Instagram Icon'
                       width={0}
                       height={0}
@@ -44,7 +44,7 @@ export default function Footer() {
                     />
 
                     <Image
-                      src='/images/icon-youtube.png'
+                      src='/images/icon-youtube.webp'
                       alt='Youtube Icon'
                       width={0}
                       height={0}
@@ -54,7 +54,7 @@ export default function Footer() {
                     />
 
                     <Image
-                      src='/images/icon-printerst.png'
+                      src='/images/icon-printerst.webp'
                       alt='Printerst Icon'
                       width={0}
                       height={0}
@@ -70,7 +70,7 @@ export default function Footer() {
             <Col flex='none' className='mt-5 md:mt-0'>
               <div className='mb-4'>
                 <Image
-                  src='/images/icon-location.png'
+                  src='/images/icon-location.webp'
                   alt='Location Icon'
                   width={0}
                   height={0}
@@ -85,7 +85,7 @@ export default function Footer() {
 
               <div className='mb-4 '>
                 <Image
-                  src='/images/icon-phone.png'
+                  src='/images/icon-phone.webp'
                   alt='Phone Icon'
                   width={0}
                   height={0}
@@ -100,7 +100,7 @@ export default function Footer() {
 
               <div className='mb-4 '>
                 <Image
-                  src='/images/icon-mail.png'
+                  src='/images/icon-mail.webp'
                   alt='Mail Icon'
                   width={0}
                   height={0}
@@ -115,7 +115,7 @@ export default function Footer() {
 
               <div>
                 <Image
-                  src='/images/icon-whatapp.png'
+                  src='/images/icon-whatapp.webp'
                   alt='Whats App Icon'
                   width={0}
                   height={0}

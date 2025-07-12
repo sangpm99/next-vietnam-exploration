@@ -8,7 +8,7 @@ export default function Clouds() {
         <Col span={24}>
           <div>
             <Image
-              src='/images/clouds.png'
+              src='/images/clouds.webp'
               alt='Section Image'
               width={0}
               height={0}
