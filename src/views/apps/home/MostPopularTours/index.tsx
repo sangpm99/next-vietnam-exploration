@@ -39,7 +39,7 @@ const tours = [
     time: "4 days",
     category: "Community tourism & trekking",
     stars: 4.5,
-    image: "/images/image-10.webp"
+    image: "https://storage.googleapis.com/2hglobalstore/upload/2025/07/12084620.image-10.jpg"
   }
 ]
 
