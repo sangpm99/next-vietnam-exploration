@@ -59,7 +59,10 @@ export default function FeaturalDestination() {
   }
 
   return (
-    <div id='destination' className="bg-[url('/images/who-we-are.webp')] bg-cover bg-center py-[100px] md:py-[200px]">
+    <div
+      id='destination'
+      className="bg-[url('/images/background-papper.webp')] bg-cover bg-center py-[100px] md:py-[200px]"
+    >
       <h3 className='text-center text-4xl'>Featural Destination</h3>
       <p className='text-center px-[5%] md:px-[20%]'>
         Vietnam offers a rich diversity of tourism experiences – from cultural and heritage tours in ancient towns,
