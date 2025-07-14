@@ -31,6 +31,16 @@ const destinations = [
     id: 4,
     name: "Da Nang",
     image: "/images/image-12.webp"
+  },
+  {
+    id: 5,
+    name: "Hoi An",
+    image: "/images/image-16.webp"
+  },
+  {
+    id: 6,
+    name: "Ba Na",
+    image: "/images/image-17.webp"
   }
 ]
 
@@ -40,11 +50,11 @@ export default function FeaturalDestination() {
   const [selected, setSelected] = useState<number>(0)
 
   const destination = useMemo(() => {
-    return destinations.find(item => item.id === Number(selected))
+    return destinations[selected]
   }, [selected])
 
   const slidesToShow = useMemo(() => {
-    return !screens.xxl && !screens.xl && !screens.lg && !screens.md ? 1 : 3
+    return !screens.xxl && !screens.xl && !screens.lg && !screens.md ? 1 : 5
   }, [screens])
 
   const settings = {
@@ -53,8 +63,10 @@ export default function FeaturalDestination() {
     infinite: true,
     arrows: true,
     centerMode: true,
-    afterChange: (current: number) => {
-      setSelected(current)
+    draggable: false,
+    swipe: false,
+    beforeChange: (current: number, next: number) => {
+      setSelected(next)
     }
   }
 
@@ -70,14 +82,20 @@ export default function FeaturalDestination() {
         spiritual pilgrimages, and vibrant city escapes.
       </p>
 
-      <Slider className='min-h-[260px] md:min-h-[510px]' {...settings} ref={sliderRef}>
+      <Slider className='min-h-[260px] md:min-h-[480px]' {...settings} ref={sliderRef}>
         {destinations.map((des, i) => (
           <div
-            className={`relative w-full p-2 cursor-grab transition-all duration-200 h-[250px] md:h-[500px] ${des.id === destination?.id ? "my-0" : "py-10 md:py-20"}`}
+            className={`relative w-full p-2 cursor-pointer transition-all duration-200 ease-in-out h-[250px] md:h-[470px] ${des.id === destination.id ? "my-0" : des.id === (destination.id - 1 + destinations.length) % destinations.length || des.id === (destination.id + 1 + destinations.length) % destinations.length ? "py-5 md:py-10" : "py-10 md:py-20"}`}
             key={des.id}
+            // @ts-expect-error
+            onClick={() => sliderRef.current?.slickGoTo(i)}
           >
-            <div className='relative w-full h-full rounded overflow-hidden'>
-              <Image src={des.image} alt={des.name} fill className='object-cover' unoptimized></Image>
+            <div
+              className={`relative w-full h-full rounded overflow-hidden p-2 ${des.id === destination.id ? "bg-gradient-to-t from-[rgb(var(--primary))] to-white" : ""}`}
+            >
+              <div className='relative w-full h-full rounded overflow-hidden'>
+                <Image src={des.image} alt={des.name} fill className='object-cover' unoptimized></Image>
+              </div>
             </div>
           </div>
         ))}
