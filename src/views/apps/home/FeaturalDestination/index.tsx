@@ -1,10 +1,10 @@
-"use client"
-import { useState, useMemo, useRef } from "react"
-import Image from "next/image"
-import Slider from "react-slick"
-import { Grid } from "antd"
+"use client";
+import { useState, useMemo, useRef } from "react";
+import Image from "next/image";
+import Slider from "react-slick";
+import { Grid } from "antd";
 
-const { useBreakpoint } = Grid
+const { useBreakpoint } = Grid;
 
 const destinations = [
   {
@@ -42,20 +42,20 @@ const destinations = [
     name: "Ba Na",
     image: "/images/image-17.webp"
   }
-]
+];
 
 export default function FeaturalDestination() {
-  const screens = useBreakpoint()
-  const sliderRef = useRef(null)
-  const [selected, setSelected] = useState<number>(0)
+  const screens = useBreakpoint();
+  const sliderRef = useRef(null);
+  const [selected, setSelected] = useState<number>(0);
 
   const destination = useMemo(() => {
-    return destinations[selected]
-  }, [selected])
+    return destinations[selected];
+  }, [selected]);
 
   const slidesToShow = useMemo(() => {
-    return !screens.xxl && !screens.xl && !screens.lg && !screens.md ? 1 : 5
-  }, [screens])
+    return !screens.xxl && !screens.xl && !screens.lg && !screens.md ? 1 : 5;
+  }, [screens]);
 
   const settings = {
     slidesToShow,
@@ -66,23 +66,28 @@ export default function FeaturalDestination() {
     draggable: false,
     swipe: false,
     beforeChange: (current: number, next: number) => {
-      setSelected(next)
+      setSelected(next);
     }
-  }
+  };
 
   return (
     <div
-      id='destination'
+      id="destination"
       className="bg-[url('/images/background-papper.webp')] bg-cover bg-center py-[100px] md:py-[200px]"
     >
-      <h3 className='text-center text-4xl'>Featural Destination</h3>
-      <p className='text-center px-[5%] md:px-[20%]'>
-        Vietnam offers a rich diversity of tourism experiences – from cultural and heritage tours in ancient towns,
-        nature and eco-travel in majestic mountains and national parks, to beach holidays, culinary adventures,
+      <h3 className="text-center text-4xl">Featural Destination</h3>
+      <p className="text-center px-[5%] md:px-[20%]">
+        Vietnam offers a rich diversity of tourism experiences – from cultural
+        and heritage tours in ancient towns, nature and eco-travel in majestic
+        mountains and national parks, to beach holidays, culinary adventures,
         spiritual pilgrimages, and vibrant city escapes.
       </p>
 
-      <Slider className='min-h-[260px] md:min-h-[480px]' {...settings} ref={sliderRef}>
+      <Slider
+        className="min-h-[260px] md:min-h-[480px]"
+        {...settings}
+        ref={sliderRef}
+      >
         {destinations.map((des, i) => (
           <div
             className={`relative w-full p-2 cursor-pointer transition-all duration-200 ease-in-out h-[250px] md:h-[470px] ${des.id === destination.id ? "my-0" : des.id === (destination.id - 1 + destinations.length) % destinations.length || des.id === (destination.id + 1 + destinations.length) % destinations.length ? "py-5 md:py-10" : "py-10 md:py-20"}`}
@@ -93,22 +98,28 @@ export default function FeaturalDestination() {
             <div
               className={`relative w-full h-full rounded overflow-hidden p-2 ${des.id === destination.id ? "bg-gradient-to-t from-[rgb(var(--primary))] to-white" : ""}`}
             >
-              <div className='relative w-full h-full rounded overflow-hidden'>
-                <Image src={des.image} alt={des.name} fill className='object-cover' unoptimized></Image>
+              <div className="relative w-full h-full rounded overflow-hidden">
+                <Image
+                  src={des.image}
+                  alt={des.name}
+                  fill
+                  className="object-cover"
+                  unoptimized
+                ></Image>
               </div>
             </div>
           </div>
         ))}
       </Slider>
 
-      <div className='flex w-100 justify-center mt-10'>
+      <div className="flex w-100 justify-center mt-10">
         <div
-          className='bg-white text-3xl py-2 px-5 text-primary border-y-0 rounded-full border-solid'
+          className="bg-white text-3xl py-2 px-5 text-primary border-y-0 rounded-full border-solid"
           style={{ borderColor: "rgba(var(--primary))" }}
         >
           {destination?.name}
         </div>
       </div>
     </div>
-  )
+  );
 }
