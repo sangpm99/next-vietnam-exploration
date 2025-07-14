@@ -6,6 +6,7 @@
   --background: #ffffff;
   --foreground: #171717;
   --primary: 218,36,30;
+  --primary-color: rgb(var(--primary));
   --carousel-size: 70px;
   --carousel-padding: 27%;
   
